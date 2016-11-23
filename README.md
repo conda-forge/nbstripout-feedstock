@@ -41,7 +41,6 @@ conda search nbstripout --channel conda-forge
 ```
 
 
-
 About conda-forge
 =================
 
