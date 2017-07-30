@@ -59,7 +59,7 @@ about:
 
     This does mostly the same thing as the `Clear All Output` command in the
     notebook UI.
-  doc_url: https://pypi.python.org/pypi/nbstripout
+  doc_url: https://pypi.org/project/nbstripout/
   dev_url: https://github.com/kynan/nbstripout
 
 extra:
