@@ -1,5 +1,5 @@
 {% set name = "nbstripout" %}
-{% set version = "0.3.0" %}
+{% set version = "0.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 9b1801e81c59e2fad03bff2b738a0251e5b1207d784154f03b1328a2aa84dd88
+  sha256: b997c99b8bbb865988202d2f005cdaabb2598b07dad891c302a147a5871a4a95
 
 build:
   number: 0
@@ -48,7 +48,8 @@ about:
   home: https://github.com/kynan/nbstripout
   license: MIT
   license_family: MIT
-  license_file: LICENSE.txt
+  # FIXME: need to add to MANIFEST.in
+  # license_file: LICENSE.txt
   summary: 'strip output from Jupyter and IPython notebooks'
   description: |
     Opens a notebook, strips its output, and writes the outputless version to the
@@ -59,7 +60,7 @@ about:
 
     This does mostly the same thing as the `Clear All Output` command in the
     notebook UI.
-  doc_url: https://pypi.python.org/pypi/nbstripout
+  doc_url: https://pypi.org/project/nbstripout/
   dev_url: https://github.com/kynan/nbstripout
 
 extra:
