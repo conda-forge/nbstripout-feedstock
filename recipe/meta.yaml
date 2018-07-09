@@ -25,6 +25,7 @@ requirements:
     - pytest-runner
   run:
     - python
+    - nbformat
 
 test:
   requires:
