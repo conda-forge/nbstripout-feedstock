@@ -1,5 +1,5 @@
 {% set name = "nbstripout" %}
-{% set version = "0.3.1" %}
+{% set version = "0.3.2" %}
 
 package:
   name: {{ name|lower }}
@@ -8,11 +8,11 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b997c99b8bbb865988202d2f005cdaabb2598b07dad891c302a147a5871a4a95
+  sha256: e2151c878e44b504443c53af2a3f09264ef30470f92c3b7a01b08df25367bffb
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: python -m pip install --no-deps --ignore-installed .
   entry_points:
     - nbstripout = nbstripout:main
@@ -25,6 +25,7 @@ requirements:
     - pytest-runner
   run:
     - python
+    - nbformat
 
 test:
   requires:
@@ -50,8 +51,7 @@ about:
   home: https://github.com/kynan/nbstripout
   license: MIT
   license_family: MIT
-  # FIXME: need to add to MANIFEST.in
-  # license_file: LICENSE.txt
+  license_file: LICENSE.txt
   summary: 'strip output from Jupyter and IPython notebooks'
   description: |
     Opens a notebook, strips its output, and writes the outputless version to the
