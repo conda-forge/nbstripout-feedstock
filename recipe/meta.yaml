@@ -50,8 +50,7 @@ about:
   home: https://github.com/kynan/nbstripout
   license: MIT
   license_family: MIT
-  # FIXME: need to add to MANIFEST.in
-  # license_file: LICENSE.txt
+  license_file: LICENSE.txt
   summary: 'strip output from Jupyter and IPython notebooks'
   description: |
     Opens a notebook, strips its output, and writes the outputless version to the
