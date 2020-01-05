@@ -1,5 +1,5 @@
 {% set name = "nbstripout" %}
-{% set version = "0.3.6" %}
+{% set version = "0.3.7" %}
 
 package:
   name: {{ name|lower }}
@@ -8,12 +8,12 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 1960caf7d1c1e281126c6c5cb98053db89eca8aaa616b58eed381e3e1508c0f4
+  sha256: 62f1b1fe9c7c298061089fd9bd5d297eb6209f7fbef0758631dbe58d38fc828f
 
 build:
   noarch: python
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - nbstripout = nbstripout:main
 
