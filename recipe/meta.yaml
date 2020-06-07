@@ -1,5 +1,5 @@
 {% set name = "nbstripout" %}
-{% set version = "0.3.7" %}
+{% set version = "0.3.8" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 62f1b1fe9c7c298061089fd9bd5d297eb6209f7fbef0758631dbe58d38fc828f
+  sha256: e56d26dab9bc8cabf68098115630e2e943d0deed5267c29f3ff32fe4ae09ec65
 
 build:
   noarch: python
@@ -40,7 +40,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE.txt
-  summary: 'strip output from Jupyter and IPython notebooks'
+  summary: strip output from Jupyter and IPython notebooks
   description: |
     Opens a notebook, strips its output, and writes the outputless version to the
     original file.
