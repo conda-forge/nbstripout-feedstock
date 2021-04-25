@@ -1,5 +1,5 @@
 {% set name = "nbstripout" %}
-{% set version = "0.3.10" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,11 +8,10 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 40aeb537eedf8a9a5eb0fb8391552a767f511f6836111f2b5a549ef8f41201ff
+  sha256: 995eadfd38815cff8a7bf9e922ac0d8a9a6a302efe82fb0e93ccdb4273f55aa7
 
 build:
-  # This is a Python 2.7 only release
-  skip: True  # [py3k]
+  noarch: python
   number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
@@ -21,11 +20,11 @@ build:
 requirements:
   host:
     - pip
-    - python
+    - python >=3.5
     - setuptools
     - pytest-runner
   run:
-    - python
+    - python >=3.5
     - nbformat
 
 test:
