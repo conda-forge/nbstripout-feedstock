@@ -1,5 +1,5 @@
 {% set name = "nbstripout" %}
-{% set version = "0.7.1" %}
+{% set version = "0.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,8 +7,8 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2aad3454dc13e356f2fc94917856bc44f2bed3add77e8ba9f3a78003074bcd84
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 4b9b563c3704f9b59067627bec7d0d5c7437527ab6c3a72dd3cf895d46bf5a44
 
 build:
   noarch: python
