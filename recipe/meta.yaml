@@ -1,6 +1,6 @@
 {% set name = "nbstripout" %}
 {% set python_min = "3.10" %}
-{% set version = "0.9.0" %}
+{% set version = "0.9.1" %}
 
 package:
   name: {{ name|lower }}
@@ -9,7 +9,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 4354284d11309f254a6ba4bd9e2f8c5953b16474b7431c278ce67b470e2123a2
+  sha256: 313bbb4217c8e38998567e5d790b6bd6c3a17a8c39073b205b84dadfc5d756dc
 
 build:
   noarch: python
